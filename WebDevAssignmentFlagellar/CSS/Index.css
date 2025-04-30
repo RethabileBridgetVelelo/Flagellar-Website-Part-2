@@ -1,0 +1,174 @@
+header {
+    background-image: url(images/logo.jpg); /* Update with your actual logo path */
+    background-repeat: no-repeat;
+    background-size: 150px auto;
+    background-position: left center;
+    width: 150px;            /* Set width */
+    height: 150px;           /* Set height */
+    border-radius: 50%;      /* This creates the circle shape */
+    object-fit: cover;       /* Makes sure the image fills the circle */
+    
+}
+.vision-card::before {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    background-image: url('images/vision-image.jpg'); /* Change per card using nth-child */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(30, 247, 157, 0.6);
+  }
+  
+  /* Optional: different image for 2nd card */
+  .vision-card:nth-child(2)::before {
+    background-image: url('images/mission-image.jpg');
+  }
+  /* 🌐 GENERAL STRUCTURE */
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    background-color: #0b1120;
+    color: #e0f2f1;
+  }
+  
+  /* 🧬 HEADER with background */
+  header {
+    background-image: url('images/logo.jpg'); /* Replace with your actual background image */
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    border-bottom: 3px solid #1ef79d;
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header h1 {
+    color: #1ef79d;
+    font-size: 48px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* 🔗 NAVIGATION */
+  nav {
+    background-color: #0f172a;
+    text-align: center;
+    padding: 15px 0;
+  }
+  nav a {
+    color: #1ef79d;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  nav a:hover {
+    color: #00ffff;
+  }
+  
+  /* 🔬 MAIN HERO CONTENT */
+  .hero-content {
+    text-align: center;
+    color: #e0f2f1;
+  }
+  .animate-text {
+    font-size: 36px;
+    font-weight: bold;
+    animation: fadeIn 3s ease-in-out;
+  }
+  .animate-text-delay {
+    font-size: 20px;
+    font-weight: lighter;
+    animation: fadeInDelay 3s ease-in-out;
+    animation-delay: 1s;
+  }
+  .cta-container {
+    margin-top: 20px;
+  }
+  .cta-button {
+    background-color: #1ef79d;
+    padding: 12px 25px;
+    border: none;
+    color: #0b1120;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .cta-button:hover {
+    background-color: #00ff8f;
+    box-shadow: 0 0 10px rgba(30, 247, 157, 0.3);
+  }
+  
+  /* 🧠 MISSION & VISION SECTIONS */
+  .vision-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+  }
+  .vision-card {
+    background-color: rgba(15, 23, 42, 0.8);
+    padding: 25px;
+    border-radius: 16px;
+    width: 45%;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(30, 247, 157, 0.2);
+  }
+  .vision-card h2 {
+    font-size: 24px;
+    color: #7dd3fc;
+  }
+  .vision-card p {
+    font-size: 16px;
+    color: #e0f2f1;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .tooltip {
+    color: #1ef79d;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .tooltip:hover {
+    color: #00ffff;
+  }
+  .tooltip-content {
+    background-color: #1ef79d;
+    color: #0b1120;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+  }
+  .tooltip:hover .tooltip-content {
+    display: block;
+  }
+  
+  /* 📸 IMAGE CONTAINER (for pictures) */
+  .particle-container {
+    background-image: url('images/cyrogenic-tomogram.jpg'); /* Your particles or cool background effect */
+    background-size: cover;
+    height: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(30, 247, 157, 0.2);
+  }
+  
+  /* 🧑‍💻 MOBILE RESPONSIVE */
+  @media (max-width: 768px) {
+    .vision-section {
+      flex-direction: column;
+      align-items: center;
+    }
+    .vision-card {
+      width: 80%;
+    }
+    header h1 {
+      font-size: 30px;
+    }
+  }
+  
+  
